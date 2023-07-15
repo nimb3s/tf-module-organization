@@ -13,9 +13,10 @@ variable "id" {
   description = "The AWS account id"
 }
 
-variable "parent_id" {
+variable "parent_org_unit_id" {
     type = string
     default = null
+    description = "(Optional) Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection."
 }
 
 variable "role_name" {

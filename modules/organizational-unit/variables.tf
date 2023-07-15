@@ -4,8 +4,9 @@ variable "name" {
   description = "(Required) Friendly name for the organizational unit"
 }
 
-variable "org_root_id" {
+variable "parent_org_unit_id" {
     type = string
+    description = "ID of the parent organizational unit, which may be the root"
 }
 
 variable "tags" {

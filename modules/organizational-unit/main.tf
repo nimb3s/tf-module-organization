@@ -1,6 +1,6 @@
 resource "aws_organizations_organizational_unit" "this_org_unit" {
   name      = var.name
-  parent_id = var.org_root_id
+  parent_id = var.parent_org_unit_id
   tags = var.tags
 }
 

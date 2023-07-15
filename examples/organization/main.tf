@@ -33,7 +33,7 @@ module "nimb3s_root_org" {
 
 module "nimb3s_org_unit_development" {
   source = "../../modules/organizational-unit"
-  org_root_id = module.nimb3s_root_org.id
+  parent_org_unit_id = module.nimb3s_root_org.id
   name = "development-ou"
   accounts = {
     development = {
@@ -69,7 +69,7 @@ module "nimb3s_org_unit_development" {
 
 module "nimb3s_org_unit_production" {
   source = "../../modules/organizational-unit"
-  org_root_id = module.nimb3s_root_org.id
+  parent_org_unit_id = module.nimb3s_root_org.id
   name = "production-ou"
   accounts = {
     production = {

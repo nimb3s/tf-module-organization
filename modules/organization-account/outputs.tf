@@ -1,8 +1,3 @@
-output "parent_id" {
-  description = "(Optional) Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection."
-  value       = aws_organizations_account.this_org_account.email
-}
-
 output "arn" {
   description = "The ARN for this account."
   value       = aws_organizations_account.this_org_account.arn
@@ -14,17 +9,17 @@ output "id" {
 }
 
 output "name" {
-  description = "(Required) Friendly name for the member account."
+  description = "Friendly name for the member account."
   value       = aws_organizations_account.this_org_account.name
 }
 
 output "email" {
-  description = "(Required) Email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account."
+  description = "Email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account."
   value       = aws_organizations_account.this_org_account.email
 }
 
 output "close_on_deletion" {
-  description = "(Optional) If true, a deletion event will close the account. Otherwise, it will only remove from the organization. This is not supported for GovCloud accounts."
+  description = "If true, a deletion event will close the account. Otherwise, it will only remove from the organization. This is not supported for GovCloud accounts."
   value       = aws_organizations_account.this_org_account.close_on_deletion
 }
 

@@ -1,5 +1,5 @@
 resource "aws_organizations_account" "this" {
-  parent_id = var.parent_id
+  parent_id = var.parent_org_unit_id
   name  = var.name
   email = var.email
   iam_user_access_to_billing = var.iam_user_access_to_billing == "" ? null : var.iam_user_access_to_billing
